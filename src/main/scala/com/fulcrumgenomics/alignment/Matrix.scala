@@ -58,7 +58,7 @@ trait Matrix[A] {
   def update(i: Int, j: Int, value: A): Unit
 
   /**
-    * Returns the dimensions of the matrix as a tuple of [[Int]]s. E.g. for a 2x2 matrix this method will
+    * Returns the dimensions of the matrix as a tuple of [[scala.Int]]s. E.g. for a 2x2 matrix this method will
     * return (2,2).  Note that, like an array, since the coordinates into the matrix are zero-based,
     * the bottom-right cell in a 2x2 matrix is accessed using matrix(1,1).
     */

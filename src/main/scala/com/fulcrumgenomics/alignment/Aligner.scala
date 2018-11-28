@@ -81,7 +81,7 @@ object Aligner {
     }
   }
 
-  /** A single alignment matrix for a given [[Direction]] storing both the scoring and traceback matrices produce by the aligner. */
+  /** A single alignment matrix for a given `Direction` storing both the scoring and traceback matrices produce by the aligner. */
   case class AlignmentMatrix(direction: Direction, scoring: Matrix[Int], trace: Matrix[Direction])
 }
 
@@ -277,7 +277,7 @@ class Aligner(val scoringFunction: (Byte,Byte) => Int,
     *
     * @param query the query sequence
     * @param target the target sequence
-    * @param matrices the scoring and trace back matrices for the [[Left]], [[Up]], and [[Diagonal]] directions.
+    * @param matrices the scoring and trace back matrices for the `Left`, `Up`, and `Diagonal` directions.
     * @return an [[Alignment]] object representing the alignment
     */
   protected def generateAlignment(query: Array[Byte], target: Array[Byte], matrices: Array[AlignmentMatrix]): Alignment = {
